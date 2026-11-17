@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5ff;
+    color: #172554;
+}
+
+.encabezado {
+    background: linear-gradient(120deg, #2563eb, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+.encabezado h1 {
+    margin: 0 0 8px;
+}
+
+.contenedor {
+    width: min(1050px, 94%);
+    margin: 25px auto;
+}
+
+.tarjeta {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px #17255418;
+}
+
+form label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .88;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #dbeafe;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #eaf1ff;
+}
+
+.acciones {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.acciones form {
+    margin: 0;
+}
+
+.peligro {
+    background: #e11d48;
+}
+
+.mensaje {
+    background: #dcfce7;
+    color: #166534;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}

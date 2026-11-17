@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titulo %}Editar contacto{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta">
+    <h2>Editar contacto</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Nombre *</label>
+        <input type="text" name="nombre" value="{{ contacto.nombre }}" required>
+        
+        <label>Teléfono *</label>
+        <input type="text" name="telefono" value="{{ contacto.telefono }}" required>
+        
+        <label>Correo electrónico</label>
+        <input type="email" name="correo" value="{{ contacto.correo or '' }}">
+        
+        <label>Categoría *</label>
+        <select name="categoria" required>
+            {% for opcion in ["Familia", "Escuela", "Trabajo", "Otro"] %}
+            <option value="{{ opcion }}" {% if contacto.categoria == opcion %} selected {% endif %}>
+                {{ opcion }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <label>Actualizar fotografía</label>
+        {% if contacto.foto %}
+            <p style="font-size: 13px; color: #475569;">Foto actual: {{ contacto.foto }}</p>
+        {% endif %}
+        <input type="file" name="foto" accept="image/*">
+        
+        <button type="submit">Guardar cambios</button>
+        <a href="{{ url_for('inicio') }}" style="margin-left: 10px; text-decoration: none; color: #2563eb;">Cancelar</a>
+    </form>
+</section>
+{% endblock %}
